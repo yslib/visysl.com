@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>YSL Blog</title>
+</head>
+<body>
+  <p>Entering the blog. <a href="/zh/">Chinese</a> · <a href="/en/">English</a></p>
+  <script>
+    (function () {
+      var locale = 'zh';
+      try {
+        var stored = localStorage.getItem('blog.locale');
+        if (stored === 'zh' || stored === 'en') locale = stored;
+      } catch (error) {}
+      location.replace('/' + locale + '/' + location.search + location.hash);
+    }());
+  </script>
+</body>
+</html>

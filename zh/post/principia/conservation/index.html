@@ -1,0 +1,51 @@
+<!doctype html><html lang=zh data-theme=light data-translation-view=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><script>(function(){try{var e=localStorage.getItem("blog.theme");e==="blue"&&(e="light"),e==="dos"&&(e="dark"),(e==="light"||e==="dark")&&(document.documentElement.setAttribute("data-theme",e),localStorage.setItem("blog.theme",e))}catch{}})()</script><title>The Laws of Conservation · LUCIDA</title><link rel=canonical href=https://visysl.com/zh/post/principia/conservation/><link rel=stylesheet href=/css/site.min.2d35c6379919d59f4c6401a67c673758cea440a1a15a8e379d4f56f87d784f885e2751ef30a4efd4388be55b7877f27d.css integrity=sha384-LTXGN5kZ1Z9MZAGmfGc3WM6kQKGhWo43nU9W+H14T4heJ1HvMKTv1DiL5Vt4d/J9><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.css integrity=sha384-1vdNCNel6Tx/NQa8IR1mGOGKsbGreCkOPfbtPPnUURJ5Tu2PRVfQ/7KLZC+Pi1p1 crossorigin=anonymous></head><body data-page-kind=article><header data-site-header><div class=brand-row><a href=https://github.com/yslib/ aria-label="yslib on GitHub" data-github-avatar><img src="https://github.com/yslib.png?size=64" alt width=32 height=32>
+</a><a href=/zh/ data-brand>LUCIDA</a></div><div class=preference-row data-preference-row><div class=theme-switch data-theme-switch><button class=theme-toggle type=button role=switch aria-checked=false aria-label="Dark mode" data-theme-toggle>
+<span class=theme-toggle-indicator aria-hidden=true></span>
+<span class=theme-toggle-icon data-theme-icon=light aria-hidden=true><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><circle cx="12" cy="12" r="3.25"/><path d="M12 2v2.25m0 15.5V22M2 12h2.25m15.5.0H22M4.93 4.93l1.59 1.59M17.48 17.48l1.59 1.59m0-14.14-1.59 1.59M6.52 17.48l-1.59 1.59"/></svg>
+</span><span class=theme-toggle-icon data-theme-icon=dark aria-hidden=true><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M20.25 15.25A8.5 8.5.0 018.75 3.75a8.5 8.5.0 1011.5 11.5z"/></svg></span></button></div><div class=translation-switch role=group aria-label="Visible translations" data-translation-switch><button type=button data-translation-view-option=en aria-label=English aria-pressed=false>EN</button>
+<button type=button data-translation-view-option=zh aria-label=Chinese aria-pressed=false>ZH</button></div></div></header><main id=main-content data-main><article data-article data-translation-view-root><div class=translation-layout data-translation-layout><section class=translation-pane lang=zh-CN data-translation-language=zh><h2 class=translation-language-label>CHINESE</h2><div data-article-content><p>We re-examine the conservation of energy and momentum we learned in middle school from a purely mathematical perspective, and then we derive the conservation of angular momentum from the same perspective.</p><hr><p>我们从纯数学的角度来重新审视中学学过的能量守恒和动量守恒,然后我们再通过同样的角度得出角动量守恒。</p><h1 id=守恒定律是什么>守恒定律是什么</h1><time class=article-date datetime=2021-01-25>Jan 25, 2021</time><p>能量守恒，动量守恒和机械能守恒都是运动积分。 为了明白什么是运动积分，需要弄清楚下面两个问题。</p><ol><li><strong>动能定理</strong> 和 <strong>动量定理</strong>与<strong>牛顿第二定律</strong>的关系</li><li><strong>动能定理</strong> 和<strong>动量守恒</strong> 以及 <strong>动量定理</strong> 和<strong>动量守恒</strong>的关系。</li></ol><h3 id=前置知识>前置知识：</h3><ol start=0><li>Nabla算子</li></ol>$$
+\nabla
+$$<ol><li><p>标量场$\Psi(\vec{r})$的<strong>梯度</strong>是<strong>向量</strong>:</p>$$\nabla\Psi = \frac{\partial{\Psi}}{\partial{x}}\vec{i} + \frac{\partial{\Psi}}{\partial{y}}\vec{j}+ \frac{\partial{\Psi}}{\partial{z}}\vec{k}$$</li><li><p>矢量场$\vec{A}(\vec{r})$ 的<strong>散度</strong>是<strong>标量</strong>:
+散度：</p>$$
+\nabla \cdot \vec{A}=\frac{\partial{A_x}}{\partial{x}} + \frac{\partial{A_y}}{\partial{y}}+ \frac{\partial{A_z}}{\partial{z}}
+$$<p>旋度：</p>$$
+\nabla \times \vec{A}
+$$</li><li><p>结论：</p>$$
+\nabla\times\left(\nabla\Psi\right) = 0
+$$<p><strong>标量场的梯度的旋度为0</strong></p>$$
+\nabla\cdot\left(\nabla\times\vec{A}\right) = 0
+$$<p><strong>矢量场的旋度的散度为0</strong></p><blockquote><p>这两个反命题也成立，也就是说，一个旋度为0的（向量）场，可以表示为一个标量场的梯度.
+一个散度为0的（向量）场，可以表示为一个（向量）场的旋度。</p></blockquote><p>例子:
+对于一个<strong>无旋场</strong>，我们可以用一个<strong>标量场</strong>来表示，这个标量场一般称为 <strong>&ldquo;势&rdquo;</strong> 。比如<strong>静电场（标量场）的电势场（只是和位置有关的一个数）<strong>和</strong>重力场（标量场）的重力势（只是一个和位置有关的标量）</strong>。 同时，我们把这种<strong>旋度为0</strong>的力场称为<strong>保守力</strong>。</p></li></ol><h2 id=能量守恒>能量守恒</h2>$$
+\vec{F} = m\ddot{\vec{r}} \Rightarrow \vec{F} = m \frac{d\vec{v}}{dt}
+$$<p>如果我们定义一个量</p>$$T = \frac{1}{2}mv^2 $$<p>那么就有</p>$$
+\vec{F}d\vec{r} = m\frac{d\vec{v}}{dt}d\vec{r} = d(\frac{1}{2}mv^2)
+$$<p>得到动能定理</p>$$\vec{F}d\vec{r} = dT$$<p>其积分形式</p>$$
+T_2-T_1 = \int_{\vec{r_1}}^{\vec{r_2}}\vec{F}d\vec{r}
+$$<p><strong>如果$\vec{F} = 0$，运动前后动能不变</strong>.</p><h2 id=动量守恒>动量守恒</h2>$$
+\vec{F} = m\ddot{\vec{r}} \Rightarrow \vec{F} = m \frac{d\vec{v}}{dt}
+$$<p>如果我们定义一个量$\vec{p} = m\vec{v}$</p><p>就得到</p>$$
+\vec{F} = \frac{d\vec{p}}{dt}
+$$<p>首先我们需要明白，动量定力和牛顿第二定律$\vec{F} = m\ddot{\vec{r}}$ 都是二阶微分方程，也就是他们的次数是一样的，从形式上来讲他们是等价的。实际上，牛顿最开始提出来的第二定律其实就是这个我们今天所熟悉的<strong>动量定理</strong>$\vec{F} = \frac{d\vec{p}}{dt}$</p><p>然后我们把这个动量定理对<strong>时间</strong>积分，得到</p>$$
+\vec{p_2} - \vec{p_1} = \int_{t_1}^{t_2}\vec{F}dt
+$$<p><strong>如果$\vec{F} = 0$，运动前后动量不变</strong>, 因为和牛顿第二定律等价，所以也可以从牛顿第二定律的角度来解释，<strong>如果合外力为0,那么速度不变</strong>。
+当然以上都是显而易见的结论，但重点在下面:</p><p>也就是说</p>$$
+\vec{F} = 0 \Rightarrow \vec{p} = \vec{C}
+$$<p>其中的这个 <strong>$\vec{p}= \vec{C}$</strong> 是一个<strong>守恒量</strong>。
+我们知道，$\vec{p}$里面的速度是$\vec{r}$的一阶导数，因此，如果我们以计算出系统的位置$\vec{r}$为目标，那么这个守恒量$\vec{p} = \vec{C}$就是一个一阶微分方程，相比于牛顿第二定律或者说动量定理，已经降了一阶了。</p><h2 id=动量矩守恒角动量守恒>动量矩守恒（角动量守恒）</h2><h3 id=矩>矩</h3><p>位置的矢量和矢量的叉积</p><h3 id=力矩>力矩</h3><p>位置矢量和力</p>$$
+\vec{M} = \vec{r}\times\vec{F}
+$$<h3 id=动量矩角动量>动量矩（角动量）</h3><p>位置矢量和动量</p>$$
+\vec{J} = \vec{r}\times\vec{p}
+$$<p>所谓的动量矩定理，就是</p>$$
+\vec{M} = \frac{\mathrm{d}{\vec{J}}}{\mathrm{d}{t}}
+$$<p>也就是动量矩对时间的导数是的力矩，<strong>求导</strong> + <strong>牛顿第二定律</strong> 就可以证明。
+所以，所以动量矩定理和牛顿第二定律等价。</p><p>我们类比之前的动量守恒，如果这里的力矩$\vec{M} = 0$，也可以得到积分后的量是一个不变量。这就是<strong>动量矩（角动量）守恒</strong>。</p><blockquote><p>动量守恒或动量矩守恒发生前提（外力为0）是在是有点苛刻。然而我们解决的问题基本上不可能不受力的，所以，对于这两种守恒，我们一般使用其分量形式来解决问题。即在某一固定方向（对动量定理来说）或对于某一固定点（对于角动量守恒）分别使用这两个守恒。在某一固定方向上应用动量定理的典型问题是一个滑块在静止的斜坯上滑下，问这两个物体的运动规律。这当然是一个在水平方向上动量守恒的例子。对于角动量守恒的经典问题是只受有心力的物体叫动量守恒，比如天体的轨道运动规律。</p></blockquote><h2 id=机械能守恒>机械能守恒</h2><p>我们看到，前面的动能定理和动量定理本质上是在某种特殊的条件下(F=0)去得到<strong>降过阶的微分方程</strong>。 使我们不用再去解$\vec{F}=m\ddot{\vec{r}}$这种复杂的二阶微分方程了。有了这种想法，我们自然更多的要去挖掘更多的<strong>运动积分</strong>。 然而，我们从牛顿第二定律出发，似乎已经不能得到新的运动积分了。但是，如果我们继续<strong>施加某种条件</strong>，可能又会发现一些守恒量。幸运的是，我们发现，如果只有<strong>保守力</strong>为主动力，我们又可以的到<strong>机械能守恒</strong>这个非常重要的运动积分。</p><p>之前的前置知识里面说了，保守力可以写作一个标量场的形式，就是势能。我们无时无刻不在的保守力重力场中，有:</p>$$
+\nabla\times\vec{F} = 0 \Rightarrow \vec{F} = -\nabla V(\vec{r})
+$$<p>再通过之前得到动能定理的方式得到：</p>$$
+\vec{F}\cdot\mathrm{d}{\vec{r}} = -\nabla V({\vec{r}})\cdot\mathrm{d}{\vec{r}} = -\mathrm{d}{V(\vec{r})}
+$$<blockquote><p>中间那一步关键的过程直接在迪卡尔坐标系下写完全就能把Nabla算子转换成一个三元函数的全微分.</p></blockquote><p>因为之前我们得到的动能定理也是</p>$$\vec{F}\cdot d\vec{r} = \mathrm{d}T$$<p>因此</p>$$
+\mathrm{d}T = -\mathrm{d}{V(\vec{r})}
+$$<p>即<strong>保守力的势能</strong>和<strong>动能</strong>相互转换。</p><p>积分的到新的运动积分为</p>$$
+T + V = C
+$$<p>这个就是<strong>机械能守恒</strong>。</p><h3 id=一维势能曲线>一维势能曲线</h3><p>在<strong>保守力</strong>的前提下，有一个这样的曲线。</p></div></section><section class=translation-pane lang=en data-translation-language=en><h2 class=translation-language-label>ENGLISH</h2><p class=translation-pending>Translation pending.</p></section></div></article></main><footer data-site-footer><span>YSLIB</span>
+<a href=https://github.com/yslib/ aria-label=GitHub data-github-link><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58.0.0 3.64.0 8.13c0 3.59 2.29 6.64 5.47 7.71.4.08.55-.18.55-.39.0-.19-.01-.83-.01-1.51-2.01.38-2.53-.5-2.69-.96-.09-.24-.48-.97-.82-1.17-.28-.15-.68-.53-.01-.54.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.21-3.64-.91-3.64-4.02.0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16.0.0.67-.22 2.2.84A7.48 7.48.0 018 3.89c.68.0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19.0 3.12-1.87 3.81-3.65 4.02.29.25.54.74.54 1.5.0 1.08-.01 1.95-.01 2.22.0.22.15.47.55.39A8.04 8.04.0 0016 8.13C16 3.64 12.42.0 8 0z"/></svg></a></footer><script src=/js/preferences.min.d9e033f727522c70dc503eec13b9eeb6d11f671d16740de28fb55d6bab6c3c02c8203a0f78b2660b839458e58f7d418d.js integrity=sha384-2eAz9ydSLHDcUD7sE7nuttEfZx0WdA3ij7Vda6tsPALIIDoPeLJmC4OUWOWPfUGN defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.js integrity=sha384-ycJ6GAwiS15LoUPipwJOrWTvkUHl/YqELValBwI5I4awP1EeEQJYarj+w85ntcz7 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/contrib/auto-render.min.js integrity=sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz crossorigin=anonymous defer></script><script>document.addEventListener("DOMContentLoaded",function(){if(typeof renderMathInElement!="function")return;document.querySelectorAll("[data-article-content]").forEach(function(e){renderMathInElement(e,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\[",right:"\\]",display:!0},{left:"\\(",right:"\\)",display:!1},{left:"$",right:"$",display:!1}],throwOnError:!1})})})</script></body></html>

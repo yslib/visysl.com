@@ -1,0 +1,99 @@
+<!doctype html><html lang=zh data-theme=light data-translation-view=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><script>(function(){try{var e=localStorage.getItem("blog.theme");e==="blue"&&(e="light"),e==="dos"&&(e="dark"),(e==="light"||e==="dark")&&(document.documentElement.setAttribute("data-theme",e),localStorage.setItem("blog.theme",e))}catch{}})()</script><title>Centrol Force · LUCIDA</title><link rel=canonical href=https://visysl.com/zh/post/principia/centrolforce/><link rel=stylesheet href=/css/site.min.2d35c6379919d59f4c6401a67c673758cea440a1a15a8e379d4f56f87d784f885e2751ef30a4efd4388be55b7877f27d.css integrity=sha384-LTXGN5kZ1Z9MZAGmfGc3WM6kQKGhWo43nU9W+H14T4heJ1HvMKTv1DiL5Vt4d/J9><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.css integrity=sha384-1vdNCNel6Tx/NQa8IR1mGOGKsbGreCkOPfbtPPnUURJ5Tu2PRVfQ/7KLZC+Pi1p1 crossorigin=anonymous></head><body data-page-kind=article><header data-site-header><div class=brand-row><a href=https://github.com/yslib/ aria-label="yslib on GitHub" data-github-avatar><img src="https://github.com/yslib.png?size=64" alt width=32 height=32>
+</a><a href=/zh/ data-brand>LUCIDA</a></div><div class=preference-row data-preference-row><div class=theme-switch data-theme-switch><button class=theme-toggle type=button role=switch aria-checked=false aria-label="Dark mode" data-theme-toggle>
+<span class=theme-toggle-indicator aria-hidden=true></span>
+<span class=theme-toggle-icon data-theme-icon=light aria-hidden=true><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><circle cx="12" cy="12" r="3.25"/><path d="M12 2v2.25m0 15.5V22M2 12h2.25m15.5.0H22M4.93 4.93l1.59 1.59M17.48 17.48l1.59 1.59m0-14.14-1.59 1.59M6.52 17.48l-1.59 1.59"/></svg>
+</span><span class=theme-toggle-icon data-theme-icon=dark aria-hidden=true><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"><path d="M20.25 15.25A8.5 8.5.0 018.75 3.75a8.5 8.5.0 1011.5 11.5z"/></svg></span></button></div><div class=translation-switch role=group aria-label="Visible translations" data-translation-switch><button type=button data-translation-view-option=en aria-label=English aria-pressed=false>EN</button>
+<button type=button data-translation-view-option=zh aria-label=Chinese aria-pressed=false>ZH</button></div></div></header><main id=main-content data-main><article data-article data-translation-view-root><div class=translation-layout data-translation-layout><section class=translation-pane lang=zh-CN data-translation-language=zh><h2 class=translation-language-label>CHINESE</h2><div data-article-content><h1 id=有心力central-foce和万有引力定律>有心力(Central Foce)和万有引力定律</h1><time class=article-date datetime=2021-01-19>Jan 19, 2021</time><p>这一篇笔记主要是记录一下有心力的一般性质的证明以及推到出有心力的轨道方程。</p><p>有心力的一般表示:</p>$$
+\vec{F} = F(r)\vec{e_r}
+$$<ul><li>前置知识</li></ul><ol><li>标量场的梯度，向量场的散度和旋度。</li></ol><h3 id=1有心力作用下角动量守恒>1.有心力作用下,角动量守恒</h3><p>这个证明非常简单，直接按照角动量定理就可以了。</p>$$
+\vec{M} = \vec{r}\times\vec{F} = 0
+$$<p>动量矩为0，则角动量守恒。</p><h3 id=2-有心力作用下质点作平面运动>2. 有心力作用下，质点作平面运动</h3><p>这告诉我们，对于这种有心力的问题，我们可以用平面极坐标系来处理。</p><h3 id=3-有心力作用下质点的掠面速度为常数>3. 有心力作用下，质点的掠面速度为常数</h3><p>这一点也是开普勒第二定律成立的的原因。
+此时掠面速度正比于角动量</p><h3 id=4-有心力作用下机械能守恒>4. 有心力作用下，机械能守恒。</h3><p>证明有心力场是一个<strong>无旋场</strong>。</p><p>如果是正圆轨道我们当然可以很简单的证明机械能守恒，但有心力的轨道可不一定是正圆，甚至都不一定是椭圆。
+我们所熟悉的圆锥曲线轨道只有平方反比的力才是才能形成抛物线轨道。这个后面就会证明。并且我们给出有心力的一般轨道形式。</p><h4 id=问题1--地球为什么不会落到太阳上>问题1. 地球为什么不会落到太阳上</h4><p>这个问题需要从速度的两个分量上说起，一个是径向，一个是横向。</p><p>根据平面及坐标系的运动量的表示，我们能够得到</p><p>径向的微分方程：</p>$$
+F(r) = m(\ddot{\vec{r}}-r\dot{\theta}^2)
+$$<p>横向(角动量守恒）：</p>$$
+0 = m(2\dot{r}\dot\theta + r\ddot{\theta}) = m \frac{1}{r}\frac{\mathrm{d}}{\mathrm{d}}\left(r^2\dot{\theta}\right)
+$$<p>根据机械能守恒$T+V=E$,就能得到:</p>$$
+\frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2) + V(r) = E
+$$<p>首先我们已经知道万有引力是平方反比的力：</p>$$
+\vec{F} = -mk\frac{1}{r^2}\vec{e_r}
+$$<p>其在向太阳接近时，势能的变化为</p>$$
+V(r) = -\int_\inf^\vec{r}\vec{F}\cdot\mathrm{d}\vec{r} = -mk\frac{1}{r}
+$$<p>注意，转化为速度的分量有两个，径向：</p>$$
+\frac{1}{2}m\dot{r}^2
+$$<p>横向:(这里要用到角动量守恒 <strong>$r^2\dot{\theta} = h$</strong> )</p>$$
+\frac{1}{2}m\frac{h^2}{r^2}
+$$<p>合在一起：</p>$$
+\frac{1}{2}m\dot{r}^2+ \frac{1}{2}m\frac{h^2}{r^2} + V(r) = E
+$$<p>也就是在横向上的动能增加比镜像上更大，定性的可以看到不会掉落到太阳上。</p><p>我们结合<strong>一维势能曲线</strong>来看，对于上面的公式</p>$$
+\frac{1}{2}m\dot{r}^2+ \frac{1}{2}m\frac{h^2}{r^2} + V(r) =\frac{1}{2}m\dot{r}^2+ \frac{1}{2}m\frac{h^2}{r^2} -mk\frac{1}{r} = E
+$$<p>我们可以看到，对于横向速度动能以及势能，可以表示成位置的函数</p>$$
+U(r) =\frac{1}{2}m\frac{h^2}{r^2} -mk\frac{1}{r}
+$$<p>我们把这个叫做<strong>有效势</strong>。结合一维势能曲线的一些结论来看，我们可以的到行星的运行规律。</p><h3 id=比奈公式>比奈公式</h3><p>在极坐标系下推导:</p>$$
+F(r) = m(\ddot{r} - r\dot{\theta}^2)
+$$<p></p>$$
+r^2\dot\theta=h
+$$<p>我们为了得到轨道方程，我们就是为了去掉$t$，也就是里面关于时间导数的那些量。只剩下$r$的表示。</p><p>经过一系列推导：</p>$$
+-\frac{F}{m} = {h^2}{u^2}\left(\frac{\mathrm{d^2}u}{\mathrm{d}{\theta^2}}+u\right)
+$$<p>其中$u$就是</p>$$
+u=\frac{1}{r}
+$$<p>这个就是<strong>比奈公式</strong>。只通过这个公式我们并不能具体确定其轨道到底是什么形状的，因为$F$还有可能含有和具体位置有关的量，当力是<strong>平方反比</strong>的形式时，才能的到这轨迹是圆锥曲线。我们只假定有心力是不能的到具体的答案的。</p><p>比奈公式是处理有心力轨迹的一般形式。 现在，允许我们当一次牛顿，也就是我们在知道这个力是平方反比力的前提下，看看那能够的到行星运动轨迹是什么。
+我们由</p>$$
+F=-mku^2
+$$<p>得到：</p>$$
+\frac{\mathrm{d^2}u}{\mathrm{d}{\theta^2}} + u = \frac{k}{h^2}
+$$<p>这个非齐次的微分方程可以通过换元$u = \zeta + \frac{k}{h^2}$的方式的到一个齐次的为分方程，解完之后我们就得到:</p>$$
+r = \frac{h^2/k}{1+A\frac{h^2}{k}\cos(\theta-\theta_0)} = \frac{p}{1+e\cos(\theta-\theta_0)}
+$$<p>这是一个<strong>圆锥曲线</strong>。</p><p><strong>焦半径</strong>为$p=\frac{h^2}{k}$,由<strong>角动量</strong>和<strong>万有引力常数</strong>决定。
+<strong>偏心率</strong>为$e = A\frac{h^2}{k}$,除了角动量，还有$A$决定了偏心率是什么，进而决定具体的圆锥曲线是什么。到这里，似乎在没有具体的运动数据下，我们没有办法去确定轨道到底是什么。那么，有没有一些定性的分析，能够在目前这种条件下上把具体的轨道确定下来？答案是有的，其实这个偏心率是<strong>机械能</strong>的函数。</p><p>结合之前的万有引力关于<strong>有效势</strong>的一维势能曲线图像的特性，</p>$$
+U(r) =\frac{1}{2}m\frac{h^2}{r^2} -mk\frac{1}{r}
+$$<p>（补图）
+其中，纵轴是<strong>有效势</strong>，横轴是<strong>径向长度</strong>，有一个极小值点，当$r$无穷大时，有一个图像有一个渐进线。就一个类似$\frac{1}{r^2} - \frac{1}{r}$的曲线。
+我们在图中画一横线代表总机械能$E$，在已经确定是轨迹是<strong>圆锥曲线</strong>中的一种情况下，</p><ol><li>当$E$为极小值的时候，此时径向长度只有一个，因此轨迹是<strong>圆</strong>，此时偏心率$e=0$</li><li>当$E$大于渐进线时，径向长度可以趋于无穷，此时轨迹是<strong>抛物线</strong>或<strong>双曲线</strong>，此时片心率$e>=1$</li><li>当$E$在这两个之间时，径向长度只能在在两个值之间变化，因此轨迹是<strong>椭圆</strong>。此时偏心率$0<e<1$</li></ol><p>既然我们知道了e与E之间的定量关系，我们就可以推出e和E之间的关系了。</p><p>我们把轨道方程带入E的表达试中，理论上是可以的到e与E之间的关系的。但是这个轨道方程中含有$\theta$，其也是$r$的函数。</p><p>我们有结论：</p><ol><li>$e=0, E = -\frac{1}{2}m\frac{k^2}{h^2}$</li><li>$0<e<1, \frac{1}{2}m\frac{k^2}{h^2} < e < 0$</li><li>$e=1, E = 0$</li><li>$e>1, E > 0$</li></ol><p>以上所有是我们假定力是平方反比力，才能够的到这些答案。因此我们回到了最初的问题&ndash;<strong>牛顿是如何发现其是平方反比力的。</strong></p></div></section><section class=translation-pane lang=en data-translation-language=en><h2 class=translation-language-label>ENGLISH</h2><div data-article-content><h1 id=有心力central-foce和万有引力定律>有心力(Central Foce)和万有引力定律</h1><time class=article-date datetime=2021-01-19>Jan 19, 2021</time><p>这一篇笔记主要是记录一下有心力的一般性质的证明以及推到出有心力的轨道方程。</p><p>有心力的一般表示:</p>$$
+\vec{F} = F(r)\vec{e_r}
+$$<ul><li>前置知识</li></ul><ol><li>标量场的梯度，向量场的散度和旋度。</li></ol><h3 id=1有心力作用下角动量守恒>1.有心力作用下,角动量守恒</h3><p>这个证明非常简单，直接按照角动量定理就可以了。</p>$$
+\vec{M} = \vec{r}\times\vec{F} = 0
+$$<p>动量矩为0，则角动量守恒。</p><h3 id=2-有心力作用下质点作平面运动>2. 有心力作用下，质点作平面运动</h3><p>这告诉我们，对于这种有心力的问题，我们可以用平面极坐标系来处理。</p><h3 id=3-有心力作用下质点的掠面速度为常数>3. 有心力作用下，质点的掠面速度为常数</h3><p>这一点也是开普勒第二定律成立的的原因。
+此时掠面速度正比于角动量</p><h3 id=4-有心力作用下机械能守恒>4. 有心力作用下，机械能守恒。</h3><p>证明有心力场是一个<strong>无旋场</strong>。</p><p>如果是正圆轨道我们当然可以很简单的证明机械能守恒，但有心力的轨道可不一定是正圆，甚至都不一定是椭圆。
+我们所熟悉的圆锥曲线轨道只有平方反比的力才是才能形成抛物线轨道。这个后面就会证明。并且我们给出有心力的一般轨道形式。</p><h4 id=问题1--地球为什么不会落到太阳上>问题1. 地球为什么不会落到太阳上</h4><p>这个问题需要从速度的两个分量上说起，一个是径向，一个是横向。</p><p>根据平面及坐标系的运动量的表示，我们能够得到</p><p>径向的微分方程：</p>$$
+F(r) = m(\ddot{\vec{r}}-r\dot{\theta}^2)
+$$<p>横向(角动量守恒）：</p>$$
+0 = m(2\dot{r}\dot\theta + r\ddot{\theta}) = m \frac{1}{r}\frac{\mathrm{d}}{\mathrm{d}}\left(r^2\dot{\theta}\right)
+$$<p>根据机械能守恒$T+V=E$,就能得到:</p>$$
+\frac{1}{2}m(\dot{r}^2+r^2\dot{\theta}^2) + V(r) = E
+$$<p>首先我们已经知道万有引力是平方反比的力：</p>$$
+\vec{F} = -mk\frac{1}{r^2}\vec{e_r}
+$$<p>其在向太阳接近时，势能的变化为</p>$$
+V(r) = -\int_\inf^\vec{r}\vec{F}\cdot\mathrm{d}\vec{r} = -mk\frac{1}{r}
+$$<p>注意，转化为速度的分量有两个，径向：</p>$$
+\frac{1}{2}m\dot{r}^2
+$$<p>横向:(这里要用到角动量守恒 <strong>$r^2\dot{\theta} = h$</strong> )</p>$$
+\frac{1}{2}m\frac{h^2}{r^2}
+$$<p>合在一起：</p>$$
+\frac{1}{2}m\dot{r}^2+ \frac{1}{2}m\frac{h^2}{r^2} + V(r) = E
+$$<p>也就是在横向上的动能增加比镜像上更大，定性的可以看到不会掉落到太阳上。</p><p>我们结合<strong>一维势能曲线</strong>来看，对于上面的公式</p>$$
+\frac{1}{2}m\dot{r}^2+ \frac{1}{2}m\frac{h^2}{r^2} + V(r) =\frac{1}{2}m\dot{r}^2+ \frac{1}{2}m\frac{h^2}{r^2} -mk\frac{1}{r} = E
+$$<p>我们可以看到，对于横向速度动能以及势能，可以表示成位置的函数</p>$$
+U(r) =\frac{1}{2}m\frac{h^2}{r^2} -mk\frac{1}{r}
+$$<p>我们把这个叫做<strong>有效势</strong>。结合一维势能曲线的一些结论来看，我们可以的到行星的运行规律。</p><h3 id=比奈公式>比奈公式</h3><p>在极坐标系下推导:</p>$$
+F(r) = m(\ddot{r} - r\dot{\theta}^2)
+$$<p></p>$$
+r^2\dot\theta=h
+$$<p>我们为了得到轨道方程，我们就是为了去掉$t$，也就是里面关于时间导数的那些量。只剩下$r$的表示。</p><p>经过一系列推导：</p>$$
+-\frac{F}{m} = {h^2}{u^2}\left(\frac{\mathrm{d^2}u}{\mathrm{d}{\theta^2}}+u\right)
+$$<p>其中$u$就是</p>$$
+u=\frac{1}{r}
+$$<p>这个就是<strong>比奈公式</strong>。只通过这个公式我们并不能具体确定其轨道到底是什么形状的，因为$F$还有可能含有和具体位置有关的量，当力是<strong>平方反比</strong>的形式时，才能的到这轨迹是圆锥曲线。我们只假定有心力是不能的到具体的答案的。</p><p>比奈公式是处理有心力轨迹的一般形式。 现在，允许我们当一次牛顿，也就是我们在知道这个力是平方反比力的前提下，看看那能够的到行星运动轨迹是什么。
+我们由</p>$$
+F=-mku^2
+$$<p>得到：</p>$$
+\frac{\mathrm{d^2}u}{\mathrm{d}{\theta^2}} + u = \frac{k}{h^2}
+$$<p>这个非齐次的微分方程可以通过换元$u = \zeta + \frac{k}{h^2}$的方式的到一个齐次的为分方程，解完之后我们就得到:</p>$$
+r = \frac{h^2/k}{1+A\frac{h^2}{k}\cos(\theta-\theta_0)} = \frac{p}{1+e\cos(\theta-\theta_0)}
+$$<p>这是一个<strong>圆锥曲线</strong>。</p><p><strong>焦半径</strong>为$p=\frac{h^2}{k}$,由<strong>角动量</strong>和<strong>万有引力常数</strong>决定。
+<strong>偏心率</strong>为$e = A\frac{h^2}{k}$,除了角动量，还有$A$决定了偏心率是什么，进而决定具体的圆锥曲线是什么。到这里，似乎在没有具体的运动数据下，我们没有办法去确定轨道到底是什么。那么，有没有一些定性的分析，能够在目前这种条件下上把具体的轨道确定下来？答案是有的，其实这个偏心率是<strong>机械能</strong>的函数。</p><p>结合之前的万有引力关于<strong>有效势</strong>的一维势能曲线图像的特性，</p>$$
+U(r) =\frac{1}{2}m\frac{h^2}{r^2} -mk\frac{1}{r}
+$$<p>（补图）
+其中，纵轴是<strong>有效势</strong>，横轴是<strong>径向长度</strong>，有一个极小值点，当$r$无穷大时，有一个图像有一个渐进线。就一个类似$\frac{1}{r^2} - \frac{1}{r}$的曲线。
+我们在图中画一横线代表总机械能$E$，在已经确定是轨迹是<strong>圆锥曲线</strong>中的一种情况下，</p><ol><li>当$E$为极小值的时候，此时径向长度只有一个，因此轨迹是<strong>圆</strong>，此时偏心率$e=0$</li><li>当$E$大于渐进线时，径向长度可以趋于无穷，此时轨迹是<strong>抛物线</strong>或<strong>双曲线</strong>，此时片心率$e>=1$</li><li>当$E$在这两个之间时，径向长度只能在在两个值之间变化，因此轨迹是<strong>椭圆</strong>。此时偏心率$0<e<1$</li></ol><p>既然我们知道了e与E之间的定量关系，我们就可以推出e和E之间的关系了。</p><p>我们把轨道方程带入E的表达试中，理论上是可以的到e与E之间的关系的。但是这个轨道方程中含有$\theta$，其也是$r$的函数。</p><p>我们有结论：</p><ol><li>$e=0, E = -\frac{1}{2}m\frac{k^2}{h^2}$</li><li>$0<e<1, \frac{1}{2}m\frac{k^2}{h^2} < e < 0$</li><li>$e=1, E = 0$</li><li>$e>1, E > 0$</li></ol><p>以上所有是我们假定力是平方反比力，才能够的到这些答案。因此我们回到了最初的问题&ndash;<strong>牛顿是如何发现其是平方反比力的。</strong></p></div></section></div></article></main><footer data-site-footer><span>YSLIB</span>
+<a href=https://github.com/yslib/ aria-label=GitHub data-github-link><svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58.0.0 3.64.0 8.13c0 3.59 2.29 6.64 5.47 7.71.4.08.55-.18.55-.39.0-.19-.01-.83-.01-1.51-2.01.38-2.53-.5-2.69-.96-.09-.24-.48-.97-.82-1.17-.28-.15-.68-.53-.01-.54.63-.01 1.08.59 1.23.83.72 1.23 1.87.88 2.33.67.07-.53.28-.88.51-1.08-1.78-.21-3.64-.91-3.64-4.02.0-.89.31-1.62.82-2.19-.08-.21-.36-1.04.08-2.16.0.0.67-.22 2.2.84A7.48 7.48.0 018 3.89c.68.0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.95.08 2.16.51.57.82 1.3.82 2.19.0 3.12-1.87 3.81-3.65 4.02.29.25.54.74.54 1.5.0 1.08-.01 1.95-.01 2.22.0.22.15.47.55.39A8.04 8.04.0 0016 8.13C16 3.64 12.42.0 8 0z"/></svg></a></footer><script src=/js/preferences.min.d9e033f727522c70dc503eec13b9eeb6d11f671d16740de28fb55d6bab6c3c02c8203a0f78b2660b839458e58f7d418d.js integrity=sha384-2eAz9ydSLHDcUD7sE7nuttEfZx0WdA3ij7Vda6tsPALIIDoPeLJmC4OUWOWPfUGN defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/katex.min.js integrity=sha384-ycJ6GAwiS15LoUPipwJOrWTvkUHl/YqELValBwI5I4awP1EeEQJYarj+w85ntcz7 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/contrib/auto-render.min.js integrity=sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz crossorigin=anonymous defer></script><script>document.addEventListener("DOMContentLoaded",function(){if(typeof renderMathInElement!="function")return;document.querySelectorAll("[data-article-content]").forEach(function(e){renderMathInElement(e,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"\\[",right:"\\]",display:!0},{left:"\\(",right:"\\)",display:!1},{left:"$",right:"$",display:!1}],throwOnError:!1})})})</script></body></html>
